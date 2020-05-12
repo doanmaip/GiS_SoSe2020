@@ -78,10 +78,12 @@
     position: fixed;
     top: 0;
     width: 100%;
+    float: right;
   }
 
   .sticky+.content {
     padding-top: 60px;
+    float: right;
   }
 
   .center {
