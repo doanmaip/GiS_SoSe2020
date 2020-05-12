@@ -41,28 +41,28 @@
 
         <br> <br>
         <hr />
-
-        <form>
                 <h3>Oder kontaktiere mich hier (nicht): </h3>
-                <fieldset>
-                        <legend> Nachricht</legend>
-                        <label for="insertname">Name:</label>
-                        <input type="text" name="insertname" id="insertname" required><br>
-                        <label for="mood-select">Wie gehts dir heut so:</label>
-                        <select name="mood" id="mood-select">
-                                <option value="mood">--bidde wählen, mich interessierts wiirklich--</option>
+
+                <div class="container">
+                        <form>
+                          <input type="text" id="fname" name="firstname" placeholder="Vorame" required>
+                          <input type="text" id="lname" name="lastname" placeholder="Nachname">
+                
+                          <select id="mood" name="mood">
+                                <option value="select">--bidde wählen, mich interessierts wiirklich--</option>
                                 <option value="gut">supi</option>
                                 <option value="neutral">geht so</option>
                                 <option value="schlecht">baaad</option>
-                        </select> <br> <br>
-                        <label for="story">Nachricht:</label> <br>
+                          </select>
+                          <p>Mit dem Absenden der Nachricht bestätige ich, dass ich zur Kenntnis genommen habe, dass diese Nachricht keinen Empfänger erreichen wird. </p>
+                          <textarea id="subject" name="subject" placeholder="Nachricht" style="height:200px"></textarea>
+                          <input type="submit" value="absenden">
+                        </form>
+                      </div>
+                      
 
-                        <textarea id="story" name="story" rows="5" cols="33">
-tell me something i don't know
-</textarea> <br>
-                        <button type="submit" name="submit">Ins Nichts senden</button>
-                </fieldset>
-        </form>
+
+
         <br>
 
 </body>
