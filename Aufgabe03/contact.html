@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>contact</title>
+        <link rel="stylesheet" type="text/css" href="external style sheet.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</head>
+
+
+<body>
+        <div id="navbar">
+          <a class="active" href="https://doanmaip.github.io/GiS_SoSe_20/Aufgabe02/contact.html">contact</a>
+          <a href="https://doanmaip.github.io/GiS_SoSe_20/Aufgabe02/aboutme.html">about me</a> 
+          <a  href="https://doanmaip.github.io/GiS_SoSe_20/Aufgabe02/portfolio.html">portfolio</a>
+      
+        </div>
+      
+        <div class="header">
+          <h2> <em>- p o r t f o l i o - </em></h2>
+          <p>von Mai</p>
+      
+      <div class="icon-bar">
+        <a href="mailto:mai.phuong.doan@hs-furtwangen.de"target="_blank"><i class='far fa-envelope' ></i></a> 
+        <a href="https://www.instagram.com/mifungaa/" target="_blank"><i class='fab fa-instagram'></i></a> 
+        <a href="https://open.spotify.com/user/ihatebastille?si=k1DzomBDQq-55b6saiiWVA" target="_blank"><i class='fab fa-spotify'></i></a> 
+      </div>
+      </body>
+
+
+                <a href="https://www.instagram.com/mifungaa/" target="_blank"><img src="insta.png" width="200"
+                                height="200" alt="instagram button" class="center"/></a> &nbsp;
+                <a href="mailto:mai.phuong.doan@hs-furtwangen.de" target="_blank"><img src="mail.png" width="200"
+                                height="200" alt="hfu email button" class="center"/></a>
+     
+                    
+
+        <br> <br>
+        <hr />
+
+        <form>
+                <h3>Oder kontaktiere mich hier (nicht): </h3>
+                <fieldset>
+                        <legend> Nachricht</legend>
+                        <label for="insertname">Name:</label>
+                        <input type="text" name="insertname" id="insertname" required><br>
+                        <label for="mood-select">Wie gehts dir heut so:</label>
+                        <select name="mood" id="mood-select">
+                                <option value="mood">--bidde wählen, mich interessierts wiirklich--</option>
+                                <option value="gut">supi</option>
+                                <option value="neutral">geht so</option>
+                                <option value="schlecht">baaad</option>
+                        </select> <br> <br>
+                        <label for="story">Nachricht:</label> <br>
+
+                        <textarea id="story" name="story" rows="5" cols="33">
+tell me something i don't know
+</textarea> <br>
+                        <button type="submit" name="submit">Ins Nichts senden</button>
+                </fieldset>
+        </form>
+        <br>
+
+</body>
+
+<script>
+        window.onscroll = function () { myFunction() };
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+                if (window.pageYOffset >= sticky) {
+                        navbar.classList.add("sticky")
+                } else {
+                        navbar.classList.remove("sticky");
+                }
+        }
+</script>
+
+</html>
