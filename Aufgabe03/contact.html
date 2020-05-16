@@ -2,85 +2,72 @@
 <html lang="de">
 
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>contact</title>
-        <link rel="stylesheet" type="text/css" href="external style sheet.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" type="text/css" href="external style sheet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="icon" type="image/png" href="moonface.png">
 
 </head>
 
 
 <body>
-        <div id="navbar">
-          <a class="active" href="https://doanmaip.github.io/GiS_SoSe_20/Aufgabe03/contact.html">contact</a>
-          <a href="https://doanmaip.github.io/GiS_SoSe_20/Aufgabe03/aboutme.html">about me</a> 
-          <a  href="https://doanmaip.github.io/GiS_SoSe_20/Aufgabe03/portfolio.html">portfolio</a>
-      
+    <div id="navbar">
+        <a class="active" href="https://doanmaip.github.io/GiS_SoSe_20/Aufgabe03/contact.html">contact</a>
+        <a href="https://doanmaip.github.io/GiS_SoSe_20/Aufgabe03/aboutme.html">about me</a>
+        <a href="https://doanmaip.github.io/GiS_SoSe_20/Aufgabe03/portfolio.html">portfolio</a>
+
+    </div>
+
+
+    <div class="header">
+        <h2> <em>-portfolio-</em></h2>
+
+        <p id="header-untertitel">von Mai</p>
+
+        <div class="icon-bar">
+            <a href="mailto:mai.phuong.doan@hs-furtwangen.de" target="_blank"><i class='far fa-envelope' ></i></a>
+            <a href="https://www.instagram.com/mifungaa/" target="_blank"><i class='fab fa-instagram'></i></a>
+            <a href="https://open.spotify.com/user/ihatebastille?si=k1DzomBDQq-55b6saiiWVA" target="_blank"><i class='fab fa-spotify'></i></a>
         </div>
-      
-        <div class="header">
-          <h2> <em>- p o r t f o l i o - </em></h2>
-          <p>von Mai</p>
-      
-      <div class="icon-bar">
-        <a href="mailto:mai.phuong.doan@hs-furtwangen.de"target="_blank"><i class='far fa-envelope' ></i></a> 
-        <a href="https://www.instagram.com/mifungaa/" target="_blank"><i class='fab fa-instagram'></i></a> 
-        <a href="https://open.spotify.com/user/ihatebastille?si=k1DzomBDQq-55b6saiiWVA" target="_blank"><i class='fab fa-spotify'></i></a> 
-</div>
-      </div>
-      </body>
+    </div>
 
+    <div class="row">
+        <div class="column">
+            <a href="https://www.instagram.com/mifungaa/" target="_blank"><img src="insta.png" width="200" height="200" alt="instagram button" /></a>
+        </div>
+        <div class="row">
+            <div class="column">
+                <a href="mailto:mai.phuong.doan@hs-furtwangen.de" target="_blank"><img src="mail.png" width="200" height="200" alt="hfu email button" /></a>
+            </div>
+        </div>
+    </div>
 
-                <a href="https://www.instagram.com/mifungaa/" target="_blank"><img src="insta.png" width="200"
-                                height="200" alt="instagram button" class="center"/></a> &nbsp;
-                <a href="mailto:mai.phuong.doan@hs-furtwangen.de" target="_blank"><img src="mail.png" width="200"
-                                height="200" alt="hfu email button" class="center"/></a>
-     
-                    
+    <br>
+    <hr />
+    <h3>Oder kontaktiere mich hier (nicht): </h3>
 
-        <br> <br>
-        <hr />
-                <h3>Oder kontaktiere mich hier (nicht): </h3>
+    <form>
+        <input type="text" id="fname" name="firstname" placeholder="Vorame" required>
+        <input type="text" id="lname" name="lastname" placeholder="Nachname">
 
-                <div class="container">
-                        <form>
-                          <input type="text" id="fname" name="firstname" placeholder="Vorame" required>
-                          <input type="text" id="lname" name="lastname" placeholder="Nachname">
-                
-                          <select id="mood" name="mood">
+        <select id="mood" name="mood">
                                 <option value="select">--bidde wählen, mich interessierts wiirklich--</option>
                                 <option value="gut">supi</option>
                                 <option value="neutral">geht so</option>
                                 <option value="schlecht">baaad</option>
                           </select>
-                          <p>Mit dem Absenden der Nachricht bestätige ich, dass ich zur Kenntnis genommen habe, dass diese Nachricht keinen Empfänger erreichen wird. </p>
-                          <textarea id="subject" name="subject" placeholder="Nachricht" style="height:200px"></textarea> <br>
-                          <input type="submit" value="absenden">
-                        </form>
-                      </div>
-                      
+        <textarea id="subject" name="subject" placeholder="Nachricht" style="height:200px"></textarea> <br>
+        <p class="p-gray">Mit dem Absenden der Nachricht bestätige ich das Wissen über diesen nutzlosen "absenden" Button. </p a>
+        <input type="submit" value="absenden">
+    </form>
 
-
-
-        <br>
+    <br>
 
 </body>
 
-<script>
-        window.onscroll = function () { myFunction() };
-
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-
-        function myFunction() {
-                if (window.pageYOffset >= sticky) {
-                        navbar.classList.add("sticky")
-                } else {
-                        navbar.classList.remove("sticky");
-                }
-        }
-</script>
+<footer>Mai Phuong Doan, HS Furtwangen, OMB SoSe 2020</footer>
 
 </html>
