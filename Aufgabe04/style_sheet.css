@@ -11,18 +11,6 @@
         text-align: center;
         padding-top: 50px;
         padding-bottom: 100px;
-        animation-duration: 3s;
-        animation-name: slidein;
-    }
-    @keyframes slidein {
-        from {
-            margin-left: 100px;
-            width: 300%;
-        }
-        to {
-            margin-left: 0%;
-            width: 100%;
-        }
     }
     .head p {
         font-family: "Oswald";
