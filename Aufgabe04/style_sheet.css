@@ -3,7 +3,7 @@
         visibility: hidden;
         height: 0px !important;
         position: absolute;
-        margin: -150px;
+        margin: -130px;
     }
     body {
         margin: auto;
@@ -202,7 +202,6 @@
         border: none;
         cursor: pointer;
         width: 30%;
-        opacity: 0.9;
     }
     .button:hover {
         opacity: 0.7;
