@@ -1,7 +1,7 @@
 @media screen and (min-width: 1024px) {
     .sprung {
         visibility: hidden;
-        height: 0px !important;
+        height: 0px;
         position: absolute;
         margin: -130px;
     }
@@ -271,6 +271,12 @@
 }
 
 @media screen and (max-width: 1024px) {
+    .sprung {
+        visibility: hidden;
+        height: 0px;
+        position: absolute;
+        margin: -130px;
+    }
     body {
         margin: auto;
         font-size: 15px;
@@ -529,6 +535,12 @@
 }
 
 @media screen and (max-width: 600px) {
+    .sprung {
+        visibility: hidden;
+        height: 0px;
+        position: absolute;
+        margin: -130px;
+    }
     body {
         margin: auto;
         font-size: 15px;
