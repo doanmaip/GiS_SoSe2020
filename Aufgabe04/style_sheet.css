@@ -133,10 +133,16 @@
         z-index: 1;
         font-family: inherit;
     }
+    .dropdown-content p {
+        padding-left: 20px;
+        height: auto;
+        text-decoration: none;
+        text-align: left;
+    }
     .dropdown-content a {
         padding: 20px;
         text-decoration: none;
-        display: inline;
+        display: block;
         text-align: left;
     }
     .dropdown-content a:hover {
