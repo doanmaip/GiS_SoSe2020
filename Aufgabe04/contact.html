@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>l o g i n &nbsp; | &nbsp; COMELY</title>
+    <title>h o m e &nbsp; | &nbsp; COMELY</title>
     <link rel="stylesheet" type="text/css" href="style_sheet.css">
-    <link rel="stylesheet" type="text/css" href="loginstyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="Comely_icon_transp.png">
 </head>
 
@@ -30,17 +30,17 @@
             <nav>
                 <a href="index.html">home</a>
                 <div class="dropdown">
-                    <a href="index.html#wohntextilien">wohntextilien</a>
+                    <a href="#wohntextilien">wohntextilien</a>
                     <div class="dropdown-content">
-                        <a href="index.html#kissen">Kissen</a>
-                        <a href="index.html#sonstiges">Sonstiges</a>
+                        <a href="#kissen">Kissen</a>
+                        <a href="#sonstiges">Sonstiges</a>
                     </div>
                 </div>
                 <div class="dropdown">
-                    <a href="index.html#wohnaccesoires">wohnaccesoires</a>
+                    <a href="#wohnaccesoires">wohnaccesoires</a>
                     <div class="dropdown-content">
-                        <a href="index.html#artprints">Art Prints</a>
-                        <a href="index.html#deko">Deko</a>
+                        <a href="#artprints">Art Prints</a>
+                        <a href="#deko">Deko</a>
                     </div>
                 </div>
             </nav>
@@ -57,7 +57,7 @@
             <div class="dropdown">
                 <a href="login.html"><img src="benutzer.png" alt="icon"></a>
                 <div class="dropdown-content">
-                    <a href="#">Login für Kunden</a>
+                    <a href="login.html">Login für Kunden</a>
 
                 </div>
             </div>
@@ -69,6 +69,7 @@
             </div>
         </div>
     </header>
+
     <div id="#" class="content">
 
         <div class="head">
@@ -77,23 +78,33 @@
             <p> Dein Onlineshop für insanely teure Deko und Einrichtung.</p>
 
         </div>
-        <div class="bg-img">
-            <form action="/action_page.php" class="container">
-                <h1>Kundenlogin</h1>
-                <b>Email</b>
-                <input type="text" placeholder="Email eingeben" name="email" required>
-                <b>Passwort</b>
-                <input type="password" placeholder="Passwort eingeben" name="psw" required>
 
-                <button type="submit" class="button">Login</button>
-            </form>
+        <form>
+            <h1>Kontaktformular</h1>
+            <fieldset>
+                <legend> Nachricht</legend>
+                <label for="insertname">Name:</label>
+                <input type="text" name="insertname" id="insertname" required><br>
+                <label for="insertemail">E-Mail:</label>
+                <input type="text" name="insertemail" id="insertemail" required><br>
+                <label for="story">Nachricht:</label> <br>
+                <textarea id="story" name="story"></textarea>
+                <p>Mit dem Absenden der Nachricht bestätige ich den Datenschutz.</p>
+                <button type="submit" class="button" name="submit">Senden</button>
+            </fieldset>
+        </form>
+
+        <div class="footer">
+            <p>Connect</p>
+            <div class="foot_icons">
+                <a href="https://www.pinterest.de/" target="blank"><img src="pinterest.png" alt="icon2"></a>
+                <a href="https://www.instagram.com/" target="blank"> <img src="instagram.png" alt="icon2"></a>
+                <a href="https://www.twitter.com/" target="blank"><img src="twitter.png" alt="icon2"></a>
+                <a href="#" target="blank"><img src="contact-us.png" alt="icon2"></a>
+            </div>
+            <p class="credits">
+                © Comely by Mai. Gis SoSe 2020 HS Furtwangen.<br> Kein Urheberrecht an den Bildern. Icons von flaticon.com. Design inspiriert von lonefox.com </p>
         </div>
-    </div>
-
-    <div class="footer">
-        <p class="credits">
-            © Comely by Mai. Gis SoSe 2020 HS Furtwangen.<br> Kein Urheberrecht an den Bildern. Icons von flaticon.com. Design inspiriert von lonefox.com</p>
-    </div>
 
 </body>
 
