@@ -108,6 +108,10 @@ for (let i = 0; i < kissen.length; i++) {
     let artikelname = document.createElement("p");
     artikelname.innerHTML = kissen[i].artikelname;
     document.getElementById("divKissen" + i)?.appendChild(artikelname);
+    //source
+    let source = document.createElement("p");
+    source.innerHTML = kissen[i].source;
+    document.getElementById("divKissen" + i)?.appendChild(source);
     //preis
     let preis = document.createElement("p");
     preis.innerHTML = kissen[i].preis;
@@ -136,7 +140,11 @@ for (let i = 0; i < sonstiges.length; i++) {
     //artikelname
     let artikelname = document.createElement("p");
     artikelname.innerHTML = sonstiges[i].artikelname;
-    document.getElementById("divSonsiges" + i)?.appendChild(artikelname);
+    document.getElementById("divSonstiges" + i)?.appendChild(artikelname);
+    //source
+    let source = document.createElement("p");
+    source.innerHTML = sonstiges[i].source;
+    document.getElementById("divSonstiges" + i)?.appendChild(source);
     //preis
     let preis = document.createElement("p");
     preis.innerHTML = sonstiges[i].preis;
@@ -155,7 +163,7 @@ for (let i = 0; i < sonstiges.length; i++) {
 //Wohnaccesoires
 //Art-Prints
 for (let i = 0; i < artprints.length; i++) {
-    //neues div erstellen; neues div an "flexKissen" adden
+    //neues div erstellen; neues div an "flexPrints" adden
     let div = document.createElement("div");
     div.id = "divPrints" + i;
     document.getElementById("flexPrints")?.appendChild(div);
@@ -167,6 +175,10 @@ for (let i = 0; i < artprints.length; i++) {
     let artikelname = document.createElement("p");
     artikelname.innerHTML = artprints[i].artikelname;
     document.getElementById("divPrints" + i)?.appendChild(artikelname);
+    //source
+    let source = document.createElement("p");
+    source.innerHTML = artprints[i].source;
+    document.getElementById("divPrints" + i)?.appendChild(source);
     //preis
     let preis = document.createElement("p");
     preis.innerHTML = artprints[i].preis;
@@ -184,7 +196,7 @@ for (let i = 0; i < artprints.length; i++) {
 }
 //Deko
 for (let i = 0; i < deko.length; i++) {
-    //neues div erstellen; neues div an "flexKissen" adden
+    //neues div erstellen; neues div an "flexDeko" adden
     let div = document.createElement("div");
     div.id = "divDeko" + i;
     document.getElementById("flexDeko")?.appendChild(div);
@@ -196,6 +208,10 @@ for (let i = 0; i < deko.length; i++) {
     let artikelname = document.createElement("p");
     artikelname.innerHTML = deko[i].artikelname;
     document.getElementById("divDeko" + i)?.appendChild(artikelname);
+    //source
+    let source = document.createElement("p");
+    source.innerHTML = deko[i].source;
+    document.getElementById("divDeko" + i)?.appendChild(source);
     //preis
     let preis = document.createElement("p");
     preis.innerHTML = deko[i].preis;
