@@ -3,7 +3,7 @@
 //Kissen
 let artikel1 = {
     bild: "pillow3.jpeg",
-    artikelname: "\"Brada – Gestreiftes Kisse\"",
+    artikelname: "\"Brada – Gestreiftes Kissen\"",
     source: "urbanoutfitters.com",
     preis: "49,00€",
     action: "https://www.urbanoutfitters.com/de-de/shop/brada-stripe-throw-cushion?color=085&currency=EUR&language=de-DE&quantity=1&ref=languageSelect&size=ONE%20SIZE&type=REGULAR"
