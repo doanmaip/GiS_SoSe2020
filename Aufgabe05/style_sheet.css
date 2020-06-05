@@ -221,7 +221,6 @@
         .flexProducts div img {
             width: 300px;
             height: 370px;
-            z-index: 0;
         }
         
         .flexProducts input {
