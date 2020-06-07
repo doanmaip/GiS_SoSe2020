@@ -164,7 +164,9 @@ function addtoCart(_event: Event): void {
     produktCounter += 1;
     cartDiv.innerHTML = produktCounter + "";
 
-    console.log("total: " + artikelSumme.toFixed(0) + "€");
+    artikelSumme += parseInt((<HTMLElement>_event.currentTarget)?.getAttribute("preis")!);
+    console.log("total: " + artikelSumme.toFixed(2) + "€");
+
     
 }
 

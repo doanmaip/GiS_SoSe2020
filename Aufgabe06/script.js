@@ -135,7 +135,8 @@ function addtoCart(_event) {
     }
     produktCounter += 1;
     cartDiv.innerHTML = produktCounter + "";
-    console.log("total: " + artikelSumme.toFixed(0) + "€");
+    artikelSumme += parseInt(_event.currentTarget?.getAttribute("preis"));
+    console.log("total: " + artikelSumme.toFixed(2) + "€");
 }
 // Aufgabe 2
 let startseite = document.createElement("a");
