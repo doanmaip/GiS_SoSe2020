@@ -146,10 +146,14 @@ for (let i: number = 0; i < produkte.length; i++) {
     kaufen.setAttribute("preis", produkte[i].preis.toString());
 }
 
-let summe: number = 0;
-let count: number = 0;
+//Aufgabe 1
+
+let artikelSumme: number = 0;
 let produktCounter: number = 0;
 let cartDiv: HTMLDivElement = document.createElement("div");
+cartDiv.id = "cart_count";
+let count: number = 0;
+
 
 function addtoCart(_event: Event): void {
     
@@ -157,17 +161,14 @@ function addtoCart(_event: Event): void {
         document.getElementById("cart_count")?.appendChild(cartDiv);
     }
 
-    produktCounter++;
+    produktCounter += 1;
     cartDiv.innerHTML = produktCounter + "";
- 
-    if ( (<HTMLButtonElement>_event.currentTarget)?.getAttribute("preis")) {
-            summe = count + parseInt((<HTMLButtonElement>_event.currentTarget)?.getAttribute("preis")!);
-            count = summe;
-        } 
-    console.log("total: " + summe.toFixed(0) + "€");
 
+    console.log("total: " + artikelSumme.toFixed(0) + "€");
     
 }
+
+// Aufgabe 2
 
 let startseite: HTMLAnchorElement = document.createElement("a");
 startseite.id = "home";

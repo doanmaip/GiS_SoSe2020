@@ -123,22 +123,21 @@ for (let i = 0; i < produkte.length; i++) {
     document.getElementById("div" + i)?.appendChild(kaufen);
     kaufen.setAttribute("preis", produkte[i].preis.toString());
 }
-let summe = 0;
-let count = 0;
+//Aufgabe 1
+let artikelSumme = 0;
 let produktCounter = 0;
 let cartDiv = document.createElement("div");
+cartDiv.id = "cart_count";
+let count = 0;
 function addtoCart(_event) {
     if (produktCounter >= 0) {
         document.getElementById("cart_count")?.appendChild(cartDiv);
     }
-    produktCounter++;
+    produktCounter += 1;
     cartDiv.innerHTML = produktCounter + "";
-    if (_event.currentTarget?.getAttribute("preis")) {
-        summe = count + parseInt(_event.currentTarget?.getAttribute("preis"));
-        count = summe;
-    }
-    console.log("total: " + summe.toFixed(0) + "€");
+    console.log("total: " + artikelSumme.toFixed(0) + "€");
 }
+// Aufgabe 2
 let startseite = document.createElement("a");
 startseite.id = "home";
 startseite.innerHTML = "home";
