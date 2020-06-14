@@ -1,176 +1,104 @@
-interface Produkt {
-    bild: string;
-    artikelname: string;
-    source: string;
-    preis: number;
-    category: string;
-}
+namespace Aufgabe07 {
 
-
-let artikel1: Produkt = { 
-    bild: "Pillow3.jpeg", 
-    artikelname: "\"Brada – Gestreiftes Kissen\"", 
-    source: "urbanoutfitters.com", 
-    preis: 49.00,
-    category: "kissen"
-   
-};
-let artikel2: Produkt = { 
-    bild: "Pillow1.jpg", 
-    artikelname: "\"Tegan Embroidered Pillow\"", 
-    source: "lonefox.com", 
-    preis: 37.00,
-    category: "kissen"
-};
-let artikel3: Produkt = { 
-    bild: "Pillow2.jpg", 
-    artikelname: "\"Emmit Kilim Pillow\"", 
-    source: "lonefox.com", 
-    preis: 39.00,
-    category: "kissen"
-};
-
-let artikel4: Produkt = { 
-    bild: "Decor3.jpeg", 
-    artikelname: "\"Badematte mit der Gestalt einer Frau\"", 
-    source: "urbanoutfitters.com", 
-    preis: 35.00,
-    category: "sonstiges"
-};
-let artikel5: Produkt = { 
-    bild: "Decor4.jpeg", 
-    artikelname: "\"Makramee-Wandbehang im Bohostil mit Mondmotiv\"", 
-    source: "urbanoutfitters.com", 
-    preis: 29.00,
-    category: "sonstiges"
-};
-let artikel6: Produkt = { 
-    bild: "Tray1.jpg", 
-    artikelname: "\"Medium Havana Coral Bow\"", 
-    source: "lonefox.com", 
-    preis: 49.00,
-    category: "sonstiges" };
-
-let artikel7: Produkt = { 
-    bild: "Print1.jpg", 
-    artikelname: "\"Retro Sunset Art Print\"", 
-    source: "lonefox.com", 
-    preis: 22.00,
-    category: "prints"
-};
-let artikel8: Produkt = { 
-    bild: "Print2.jpg", 
-    artikelname: "\"Visual Interest Art Print\"", 
-    source: "lonefox.com", 
-    preis: 22.00,
-    category: "prints"
-};
-let artikel9: Produkt = { 
-    bild: "Print3.jpg", 
-    artikelname: "\"Sand to Sea Art Print\"", 
-    source: "lonefox.com", 
-    preis: 22.00,
-    category: "prints" 
-};
-
-let artikel10: Produkt = { 
-    bild: "Decor1.jpeg", 
-    artikelname: "\"Sierra Vase\"", 
-    source: "anthropology.com", 
-    preis: 100.00,
-    category: "deko"
-};
-let artikel11: Produkt = { 
-    bild: "Decor2.jpeg", 
-    artikelname: "\"Mia Schminkspiegel\"", 
-    source: "lanthropology.com", 
-    preis: 55.00,
-    category: "deko"
-};
-let artikel12: Produkt = { 
-    bild: "Decor5.jpeg", 
-    artikelname: "\"Keramiktasse mit zarten Streifen\"", 
-    source: "urbanoutfitters.com", 
-    preis: 16.00,
-    category: "deko"
-};
-
-let produkte: Produkt[] = [artikel1, artikel2, artikel3, artikel4, artikel5, artikel6, artikel7, artikel8, artikel9, artikel10, artikel11, artikel12];
-
-for (let i: number = 0; i < produkte.length; i++) {
-
-
-    if (produkte[i].category == "kissen") {
-        let newDiv: HTMLDivElement = document.createElement("div");
-        newDiv.id = "div" + i;
-        document.getElementById("flexKissen")?.appendChild(newDiv); 
+    
+    export function createArtikel(): void {
+    for (let i: number = 0; i < produkte.length; i++) {
+    
+        if (produkte[i].category == "kissen") {
+            let newDiv: HTMLDivElement = document.createElement("div");
+            newDiv.id = "div" + i;
+            document.getElementById("flexKissen")?.appendChild(newDiv); 
+            newDiv.setAttribute("index", i.toString());
         }
     
-    if (produkte[i].category == "sonstiges") {
-        let newDiv: HTMLDivElement = document.createElement("div");
-        newDiv.id = "div" + i;
-        document.getElementById("flexSonstiges")?.appendChild(newDiv);
+        if (produkte[i].category == "sonstiges") {
+            let newDiv: HTMLDivElement = document.createElement("div");
+            newDiv.id = "div" + i;
+            document.getElementById("flexSonstiges")?.appendChild(newDiv);
+            newDiv.setAttribute("index", i.toString());
         }
-    if (produkte[i].category == "prints") {
-        let newDiv: HTMLDivElement = document.createElement("div");
-        newDiv.id = "div" + i;
-        document.getElementById("flexPrints")?.appendChild(newDiv); 
-        }
+
+        if (produkte[i].category == "prints") {
+            let newDiv: HTMLDivElement = document.createElement("div");
+            newDiv.id = "div" + i;
+            document.getElementById("flexPrints")?.appendChild(newDiv);  
+            newDiv.setAttribute("index", i.toString());
+            }
+
+        if (produkte[i].category == "deko") {
+            let newDiv: HTMLDivElement = document.createElement("div");
+            newDiv.id = "div" + i;
+            document.getElementById("flexDeko")?.appendChild(newDiv);
+            newDiv.setAttribute("index", i.toString());
+            }
+
+        let imgElement: HTMLImageElement = document.createElement("img");
+        imgElement.src = produkte[i].bild;
+        document.getElementById("div" + i)?.appendChild(imgElement);
         
-    if (produkte[i].category == "deko") {
-        let newDiv: HTMLDivElement = document.createElement("div");
-        newDiv.id = "div" + i;
-        document.getElementById("flexDeko")?.appendChild(newDiv);
-        }    
-    
-    let imgElement: HTMLImageElement = document.createElement("img");
-    imgElement.src = produkte[i].bild;
-    document.getElementById("div" + i)?.appendChild(imgElement);
+        let artikelname: HTMLParagraphElement = document.createElement("p");
+        artikelname.innerHTML = produkte[i].artikelname;
+        document.getElementById("div" + i)?.appendChild(artikelname);
+        
+        let source: HTMLParagraphElement = document.createElement("p");
+        source.innerHTML = produkte[i].source;
+        document.getElementById("div" + i)?.appendChild(source);
+        
+        let preis: HTMLElement = document.createElement("p");
+        preis.innerHTML = produkte[i].preis + " €";
+        document.getElementById("div" + i)?.appendChild(preis);
+        
+        let kaufen: HTMLButtonElement = document.createElement("button");
+        kaufen.innerHTML = "Zum Warenkorb hinzufügen";
+        kaufen.addEventListener("click", addtoCart);
+        document.getElementById("div" + i)?.appendChild(kaufen);
+        kaufen.setAttribute("preis", produkte[i].preis.toString());
+        }
 
-    let artikelname: HTMLParagraphElement = document.createElement("p");
-    artikelname.innerHTML = produkte[i].artikelname;
-    document.getElementById("div" + i)?.appendChild(artikelname);
-
-    let source: HTMLParagraphElement = document.createElement("p");
-    source.innerHTML = produkte[i].source;
-    document.getElementById("div" + i)?.appendChild(source);
-
-    let preis: HTMLElement = document.createElement("p");
-    preis.innerHTML = produkte[i].preis + " €";
-    document.getElementById("div" + i)?.appendChild(preis);
-
-    let kaufen: HTMLButtonElement = document.createElement("button");
-    kaufen.innerHTML = "Zum Warenkorb hinzufügen";
-    kaufen.addEventListener("click", addtoCart);
-    document.getElementById("div" + i)?.appendChild(kaufen);
-    kaufen.setAttribute("preis", produkte[i].preis.toString());
-}
-
-//Aufgabe 1
-
-let artikelSumme: number = 0;
-let produktCounter: number = 0;
-let cartDiv: HTMLDivElement = document.createElement("div");
-cartDiv.id = "cart_count";
-let count: number = 0;
-
-
-function addtoCart(_event: Event): void {
-    
-    if (produktCounter >= 0) {
-        document.getElementById("cart_count")?.appendChild(cartDiv);
     }
-
-    produktCounter += 1;
-    cartDiv.innerHTML = produktCounter + "";
-
-    artikelSumme += parseInt((<HTMLElement>_event.currentTarget)?.getAttribute("preis")!);
-    console.log("total: " + artikelSumme.toFixed(2) + "€");
-
     
-}
+    //Aufgabe 1
 
-// Aufgabe 2
+    let artikelSumme: number = 0;
+    let produktCounter: number = 0;
+    let cartDiv: HTMLDivElement = document.createElement("div");
+    cartDiv.id = "cart_count";
+    let count: number = 0;
+    
+    let cartProdukte: Produkt[] = [];
+    
+    export function addtoCart(_event: Event): void {
+    
+        if (produktCounter >= 0) {
+            document.getElementById("cart_count")?.appendChild(cartDiv);
+        }
+    
+        produktCounter += 1;
+        cartDiv.innerHTML = produktCounter + "";
+    
+        artikelSumme += parseInt((<HTMLElement>_event.currentTarget)?.getAttribute("preis")!);
+
+    }
+     
+    if ( (<HTMLButtonElement>_event.currentTarget)?.getAttribute("preis")) {
+        artikelSumme = count + parseInt((<HTMLButtonElement>_event.currentTarget)?.getAttribute("preis")!);
+        count = artikelSumme;
+            } 
+    console.log(artikelSumme.toFixed(0));
+    
+    let indexButton: string = (<HTMLDivElement>(<HTMLElement>_event.currentTarget).parentElement).getAttribute("index")!;
+    let indexNr: number = parseInt(indexButton);
+        
+    cartProdukte.push(produkte[indexNr]);
+    localStorage.setItem("artikel_bild" + (cartProdukte.length - 1), produkte[indexNr].bild);
+    localStorage.setItem("artikel_name" + (cartProdukte.length - 1), produkte[indexNr].artikelname);
+    localStorage.setItem("artikel_description" + (cartProdukte.length - 1), produkte[indexNr].source);
+    localStorage.setItem("artikel_preis" + (cartProdukte.length - 1), produkte[indexNr].preis.toString());
+    localStorage.setItem("anzahlArtikel", cartProdukte.length.toString());
+        
+    }
+    
+    // Aufgabe 2
 
 let startseite: HTMLAnchorElement = document.createElement("a");
 startseite.id = "home";
@@ -203,6 +131,9 @@ function handleKategorie(_event: Event): void {
             (<HTMLDivElement>document.getElementById("accessoiresBlock")).style.display = "block";
         }
 }
+
+
+
 
 
 
