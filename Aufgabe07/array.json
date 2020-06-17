@@ -1,13 +1,85 @@
-[{ "bild": "Pillow3.jpeg", "artikelname": "\"Brada – Gestreiftes Kissen\"", "source": "urbanoutfitters.com", "preis": 49.00, "category": "kissen" },
-    { "bild": "Pillow1.jpg", "artikelname": "\"Tegan Embroidered Pillow\"", "source": "lonefox.com", "preis": 37.00, "category": "kissen" },
-    { "bild": "Pillow2.jpg", "artikelname": "\"Emmit Kilim Pillow\"", "source": "lonefox.com", "preis": 39.00, "category": "kissen" },
-    { "bild": "Decor3.jpeg", "artikelname": "\"Badematte mit der Gestalt einer Frau\"", "source": "urbanoutfitters.com", "preis": 35.00, "category": "sonstiges" },
-    { "bild": "Decor4.jpeg", "artikelname": "\"Makramee-Wandbehang im Bohostil mit Mondmotiv\"", "source": "urbanoutfitters.com", "preis": 29.00, "category": "sonstiges" },
-    { "bild": "Tray1.jpg", "artikelname": "\"Medium Havana Coral Bow\"", "source": "lonefox.com", "preis": 49.00, "category": "sonstiges" },
-    { "bild": "Print1.jpg", "artikelname": "\"Retro Sunset Art Print\"", "source": "lonefox.com", "preis": 22.00, "category": "prints" },
-    { "bild": "Print2.jpg", "artikelname": "\"Visual Interest Art Print\"", "source": "lonefox.com", "preis": 100, "category": "prints" },
-    { "bild": "Print3.jpg", "artikelname": "\"Sand to Sea Art Print\"", "source": "lonefox.com", "preis": 22.00, "category": "prints" },
-    { "bild": "Decor1.jpeg", "artikelname": "\"Sierra Vase\"", "source": "anthropology.com", "preis": 100.00, "category": "deko" },
-    { "bild": "Decor2.jpeg", "artikelname": "\"Mia Schminkspiegel\"", "source": "anthropology.com", "preis": 55.00, "category": "deko" },
-    { "bild": "Decor5.jpeg", "artikelname": "\"Keramiktasse mit zarten Streifen\"", "source": "urbanoutfitters.com", "preis": 16.00, "category": "deko" }
+[{
+        "bild": "Pillow3.jpeg",
+        "artikelname": "\"Brada – Gestreiftes Kissen\"",
+        "source": "urbanoutfitters.com",
+        "preis": 49.00,
+        "category": "kissen"
+    },
+    {
+        "bild": "Pillow1.jpg",
+        "artikelname": "\"Tegan Embroidered Pillow\"",
+        "source": "lonefox.com",
+        "preis": 37.00,
+        "category": "kissen"
+    },
+    {
+        "bild": "Pillow2.jpg",
+        "artikelname": "\"Emmit Kilim Pillow\"",
+        "source": "lonefox.com",
+        "preis": 39.00,
+        "category": "kissen"
+    },
+    {
+        "bild": "Decor3.jpeg",
+        "artikelname": "\"Badematte mit der Gestalt einer Frau\"",
+        "source": "urbanoutfitters.com",
+        "preis": 35.00,
+        "category": "sonstiges"
+    },
+    {
+        "bild": "Decor4.jpeg",
+        "artikelname": "\"Makramee-Wandbehang im Bohostil mit Mondmotiv\"",
+        "source": "urbanoutfitters.com",
+        "preis": 29.00,
+        "category": "sonstiges"
+    },
+    {
+        "bild": "Tray1.jpg",
+        "artikelname": "\"Medium Havana Coral Bow\"",
+        "source": "lonefox.com",
+        "preis": 49.00,
+        "category": "sonstiges"
+    },
+    {
+        "bild": "Print1.jpg",
+        "artikelname": "\"Retro Sunset Art Print\"",
+        "source": "lonefox.com",
+        "preis": 22.00,
+        "category": "prints"
+    },
+    {
+        "bild": "Print2.jpg",
+        "artikelname": "\"Visual Interest Art Print\"",
+        "source": "lonefox.com",
+        "preis": 100,
+        "category": "prints"
+    },
+    {
+        "bild": "Print3.jpg",
+        "artikelname": "\"Sand to Sea Art Print\"",
+        "source": "lonefox.com",
+        "preis": 22.00,
+        "category": "prints"
+    },
+    {
+        "bild": "Decor1.jpeg",
+        "artikelname": "\"Sierra Vase\"",
+        "source": "anthropology.com",
+        "preis": 100.00,
+        "category": "deko"
+    },
+    {
+        "bild": "Decor2.jpeg",
+        "artikelname": "\"Mia Schminkspiegel\"",
+        "source": "anthropology.com",
+        "preis": 55.00,
+        "category": "deko"
+    },
+    {
+        "bild": "Decor5.jpeg",
+        "artikelname": "\"Keramiktasse mit zarten Streifen\"",
+        "source": "urbanoutfitters.com",
+        "preis": 16.00,
+        "category": "deko"
+    }
 ]
