@@ -16,7 +16,7 @@ let artikel2 = {
     action: "https://lonefox.com/collections/throw-pillows/products/tegan-embroidered-pillow"
 };
 let artikel3 = {
-    bild: "Pillow2.jpg",
+    bild: "illow2.jpg",
     artikelname: "\"Emmit Kilim Pillow\"",
     source: "lonefox.com",
     preis: "$39,00",

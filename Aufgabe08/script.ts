@@ -4,7 +4,6 @@ namespace Aufgabe08{
     let myButton: HTMLButtonElement = (<HTMLButtonElement>document.getElementById("button"));
     myButton.addEventListener("click", buttonHandler);
     
-    //Hängt Formulardaten an die URL
     async function addToURL(): Promise<string> {
         formData = new FormData(document.forms[0]);
         let url: string = "https://mifungaa.herokuapp.com/";
