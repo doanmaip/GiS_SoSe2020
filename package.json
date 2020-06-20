@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "node Aufgabe08/script.js"
+        "start": "node Aufgabe08/server.js"
     },
     "author": "Mai Phuong Doan",
     "license": "ISC",
