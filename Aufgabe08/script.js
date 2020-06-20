@@ -1,6 +1,6 @@
 "use strict";
 var Aufgabe08;
-(function (Aufgabe08) {
+(function(Aufgabe08) {
     let formData;
     let myButton = document.getElementById("button");
     myButton.addEventListener("click", buttonHandler);

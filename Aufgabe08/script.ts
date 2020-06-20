@@ -1,4 +1,4 @@
-namespace Aufgabe08{
+namespace Aufgabe08 {
 
     let formData: FormData;
     let myButton: HTMLButtonElement = (<HTMLButtonElement>document.getElementById("button"));
