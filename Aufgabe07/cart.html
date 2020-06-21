@@ -65,18 +65,20 @@
         </div>
 
         <a id="cartProdukte"></a>
-        <a id="gesamtsumme"></a>
+
         <h2> Gesamtsumme:</h2>
-        <p id="remove_all"> <em>Alle Artikel aus dem Warenkorb entfernen</em></p>
+        <p id="gesamtsumme">
+            </a>
+            <a id="remove_all" href=""><em>Alle Artikel aus dem Warenkorb
+                    entfernen</em></a>
+            <form action="#">
+                <input type="submit" class="button" value="Checkout" />
+            </form>
+            <br>
 
-        <form action="#">
-            <input type="submit" class="button" value="Checkout" />
-        </form>
-        <br>
-
-        <form action="index.html">
-            <input type="submit" class="button" value="Continue Shopping" />
-        </form>
+            <form action="index.html">
+                <input type="submit" class="button" value="Continue Shopping" />
+            </form>
 
 
     </div>
@@ -95,5 +97,16 @@
     </div>
 
 </body>
+
+<script>
+    document.getElementById("remove_all").addEventListener("click", removeAll);
+
+
+    function removeAll() {
+
+        localStorage.clear();
+
+    }
+</script>
 
 </html>
