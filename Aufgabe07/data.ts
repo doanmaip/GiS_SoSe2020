@@ -8,7 +8,7 @@ namespace Aufgabe07 {
     }
 
     export let produkte: Produkt[];
-    loadArtikel("array.json");
+    loadArtikel("./array.json");
 
     async function loadArtikel(_url: RequestInfo): Promise<void> {
         let response: Response = await fetch(_url);
