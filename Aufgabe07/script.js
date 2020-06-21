@@ -61,50 +61,51 @@ var Aufgabe07;
         produktCounter += 1;
         cartDiv.innerHTML = produktCounter + "";
         artikelSumme += parseInt(_event.currentTarget?.getAttribute("preis"));
+        localStorage.setItem("summe", artikelSumme.toString());
+        if (_event.currentTarget?.getAttribute("preis")) {
+            artikelSumme = count + parseInt(_event.currentTarget?.getAttribute("preis"));
+            count = artikelSumme;
+        }
+        console.log(artikelSumme.toFixed(0));
+        let indexButton = _event.currentTarget.parentElement.getAttribute("index");
+        let indexNr = parseInt(indexButton);
+        cartProdukte.push(Aufgabe07.produkte[indexNr]);
+        localStorage.setItem("artikel_bild" + (cartProdukte.length - 1), Aufgabe07.produkte[indexNr].bild);
+        localStorage.setItem("artikel_name" + (cartProdukte.length - 1), Aufgabe07.produkte[indexNr].artikelname);
+        localStorage.setItem("artikel_description" + (cartProdukte.length - 1), Aufgabe07.produkte[indexNr].source);
+        localStorage.setItem("artikel_preis" + (cartProdukte.length - 1), Aufgabe07.produkte[indexNr].preis.toString());
+        localStorage.setItem("anzahlArtikel", cartProdukte.length.toString());
     }
     Aufgabe07.addtoCart = addtoCart;
-    if (_event.currentTarget?.getAttribute("preis")) {
-        artikelSumme = count + parseInt(_event.currentTarget?.getAttribute("preis"));
-        count = artikelSumme;
+    // Aufgabe 2
+    let startseite = document.createElement("a");
+    startseite.id = "home";
+    startseite.innerHTML = "home";
+    startseite.addEventListener("click", handleKategorie);
+    document.getElementById("home")?.appendChild(startseite);
+    let textilienCategory = document.createElement("a");
+    textilienCategory.id = "textilien";
+    textilienCategory.innerHTML = "wohntextilien";
+    textilienCategory.addEventListener("click", handleKategorie);
+    document.getElementById("wohntextilien")?.appendChild(textilienCategory);
+    let accessoiresCategory = document.createElement("a");
+    accessoiresCategory.id = "accessoires";
+    accessoiresCategory.innerHTML = "wohnaccessoires";
+    accessoiresCategory.addEventListener("click", handleKategorie);
+    document.getElementById("wohnaccessoires")?.appendChild(accessoiresCategory);
+    function handleKategorie(_event) {
+        if (_event.currentTarget.getAttribute("id") == "home") {
+            document.getElementById("textilBlock").style.display = "block";
+            document.getElementById("accessoiresBlock").style.display = "block";
+        }
+        else if (_event.currentTarget.getAttribute("id") == "textilien") {
+            document.getElementById("textilBlock").style.display = "block";
+            document.getElementById("accessoiresBlock").style.display = "none";
+        }
+        else if (_event.currentTarget.getAttribute("id") == "accessoires") {
+            document.getElementById("textilBlock").style.display = "none";
+            document.getElementById("accessoiresBlock").style.display = "block";
+        }
     }
-    console.log(artikelSumme.toFixed(0));
-    let indexButton = _event.currentTarget.parentElement.getAttribute("index");
-    let indexNr = parseInt(indexButton);
-    cartProdukte.push(Aufgabe07.produkte[indexNr]);
-    localStorage.setItem("artikel_bild" + (cartProdukte.length - 1), Aufgabe07.produkte[indexNr].bild);
-    localStorage.setItem("artikel_name" + (cartProdukte.length - 1), Aufgabe07.produkte[indexNr].artikelname);
-    localStorage.setItem("artikel_description" + (cartProdukte.length - 1), Aufgabe07.produkte[indexNr].source);
-    localStorage.setItem("artikel_preis" + (cartProdukte.length - 1), Aufgabe07.produkte[indexNr].preis.toString());
-    localStorage.setItem("anzahlArtikel", cartProdukte.length.toString());
 })(Aufgabe07 || (Aufgabe07 = {}));
-// Aufgabe 2
-let startseite2 = document.createElement("a");
-startseite.id = "home";
-startseite.innerHTML = "home";
-startseite.addEventListener("click", handleKategorie);
-document.getElementById("home")?.appendChild(startseite);
-let textilienCategory2 = document.createElement("a");
-textilienCategory.id = "textilien";
-textilienCategory.innerHTML = "wohntextilien";
-textilienCategory.addEventListener("click", handleKategorie);
-document.getElementById("wohntextilien")?.appendChild(textilienCategory);
-let accessoiresCategory2 = document.createElement("a");
-accessoiresCategory.id = "accessoires";
-accessoiresCategory.innerHTML = "wohnaccessoires";
-accessoiresCategory.addEventListener("click", handleKategorie);
-document.getElementById("wohnaccessoires")?.appendChild(accessoiresCategory);
-function handleKategorie(_event) {
-    if (_event.currentTarget.getAttribute("id") == "home") {
-        document.getElementById("textilBlock").style.display = "block";
-        document.getElementById("accessoiresBlock").style.display = "block";
-    }
-    else if (_event.currentTarget.getAttribute("id") == "textilien") {
-        document.getElementById("textilBlock").style.display = "block";
-        document.getElementById("accessoiresBlock").style.display = "none";
-    }
-    else if (_event.currentTarget.getAttribute("id") == "accessoires") {
-        document.getElementById("textilBlock").style.display = "none";
-        document.getElementById("accessoiresBlock").style.display = "block";
-    }
-}
 //# sourceMappingURL=script.js.map
