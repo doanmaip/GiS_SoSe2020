@@ -100,19 +100,19 @@ namespace Aufgabe07 {
     
     // Aufgabe 2
 
-let startseite: HTMLAnchorElement = document.createElement("a");
+let startseite2: HTMLAnchorElement = document.createElement("a");
 startseite.id = "home";
 startseite.innerHTML = "home";
 startseite.addEventListener("click", handleKategorie);
 document.getElementById("home")?.appendChild(startseite);
 
-let textilienCategory: HTMLAnchorElement = document.createElement("a");
+let textilienCategory2: HTMLAnchorElement = document.createElement("a");
 textilienCategory.id = "textilien";
 textilienCategory.innerHTML = "wohntextilien";
 textilienCategory.addEventListener("click", handleKategorie);
 document.getElementById("wohntextilien")?.appendChild(textilienCategory);
 
-let accessoiresCategory: HTMLAnchorElement = document.createElement("a");
+let accessoiresCategory2: HTMLAnchorElement = document.createElement("a");
 accessoiresCategory.id = "accessoires";
 accessoiresCategory.innerHTML = "wohnaccessoires";
 accessoiresCategory.addEventListener("click", handleKategorie);

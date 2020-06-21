@@ -10,13 +10,12 @@
 
 <body>
 
-    <h1>Login für Kunden</h1>
-    <form method="GET" action="https://mifungaa.herokuapp.com/"></form>
-    <label for="email">Email:</label> <br>
-    <input type="email" id="email" name="email"> <br>
-    <label for="passwort">Passwort:</label> <br>
-    <input type="password" id="passwort" name="passwort"> <br>
-    <button id="button" type="button">Login</button>
+    <h1>Kontaktformular</h1>
+    <form method="GET" action="https://mifungaa.herokuapp.com/">
+        <input type="text" name="firstname" placeholder="Vorame" required> <br>
+        <input type="text" name="lastname" placeholder="Nachname" required><br> <br>
+        <textarea id="subject" name="message" placeholder="Nachricht" required></textarea> <br>
+        <input type="submit" id="button" value="absenden">
     </form>
 
 </body>
