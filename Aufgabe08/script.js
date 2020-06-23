@@ -3,8 +3,8 @@ var Aufgabe08;
 (function (Aufgabe08) {
     let formData;
     let button = document.getElementById("button");
-    button.addEventListener("click", communiacate);
-    async function communiacate() {
+    button.addEventListener("click", communicate);
+    async function communicate() {
         formData = new FormData(document.forms[0]);
         let url = "https://mifungaa.herokuapp.com/";
         //let url: string = "http://localhost:8100";

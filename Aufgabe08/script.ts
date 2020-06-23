@@ -1,9 +1,9 @@
 namespace Aufgabe08 {
     let formData: FormData;
     let button: HTMLButtonElement = <HTMLButtonElement>document.getElementById("button");
-    button.addEventListener("click", communiacate);
+    button.addEventListener("click", communicate);
 
-    async function communiacate(): Promise<void> {
+    async function communicate(): Promise<void> {
         formData = new FormData(document.forms[0]);
         let url: string = "https://mifungaa.herokuapp.com/";
         //let url: string = "http://localhost:8100";
