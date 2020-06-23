@@ -92,7 +92,7 @@ namespace Aufgabe07 {
         let indexNr: number = parseInt(indexButton);
 
         cartProdukte.push(produkte[indexNr]);
-        localStorage.setItem("cart", JSON.stringify(produkte));
+        localStorage.setItem("cart", JSON.stringify(cartProdukte));
         /*
         localStorage.setItem("artikel_bild" + (cartProdukte.length - 1), produkte[indexNr].bild);
         localStorage.setItem("artikel_name" + (cartProdukte.length - 1), produkte[indexNr].artikelname);
