@@ -34,6 +34,7 @@ namespace Aufgabe07 {
 
             let imgElement: HTMLImageElement = document.createElement("img");
             imgElement.src = produkte[i].bild;
+            imgElement.classList.add("articlepictures");
             document.getElementById("div" + i) ?.appendChild(imgElement);
 
             let artikelname: HTMLParagraphElement = document.createElement("p");
@@ -67,7 +68,7 @@ namespace Aufgabe07 {
 
     let cartProdukte: Produkt[] = [];
 
-    export function addtoCart(_event: Event): void {
+    function addtoCart(_event: Event): void {
 
         if (produktCounter >= 0) {
             document.getElementById("cart_count") ?.appendChild(cartDiv);
@@ -78,7 +79,7 @@ namespace Aufgabe07 {
 
         artikelSumme += parseInt((<HTMLElement>_event.currentTarget) ?.getAttribute("preis")!);
 
-        localStorage.setItem("summe", artikelSumme.toString());
+        
 
 
         if ((<HTMLButtonElement>_event.currentTarget) ?.getAttribute("preis")) {
@@ -91,11 +92,13 @@ namespace Aufgabe07 {
         let indexNr: number = parseInt(indexButton);
 
         cartProdukte.push(produkte[indexNr]);
+        localStorage.setItem("cart", JSON.stringify(produkte));
+        /*
         localStorage.setItem("artikel_bild" + (cartProdukte.length - 1), produkte[indexNr].bild);
         localStorage.setItem("artikel_name" + (cartProdukte.length - 1), produkte[indexNr].artikelname);
         localStorage.setItem("artikel_description" + (cartProdukte.length - 1), produkte[indexNr].source);
         localStorage.setItem("artikel_preis" + (cartProdukte.length - 1), produkte[indexNr].preis.toString());
-        localStorage.setItem("anzahlArtikel", cartProdukte.length.toString());
+        localStorage.setItem("anzahlArtikel", cartProdukte.length.toString());*/
 
 
     }
@@ -134,8 +137,4 @@ namespace Aufgabe07 {
         }
     }
 
-
-
-
-
-
+}

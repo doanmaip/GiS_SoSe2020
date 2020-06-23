@@ -1,61 +1,60 @@
-namespace aufgabe07 {
-
-    console.log(localStorage);
-    let gesamtsumme: number = Number(localStorage.getItem("anzahlArtikel"));
+namespace Aufgabe07 {
 
 
-    for (let i: number = 0; i < (gesamtsumme); i++) {
+    let carticles: Produkt[] = JSON.parse(localStorage.getItem("cart")!);
+    console.log(carticles);
 
-        let divCart: HTMLDivElement = document.createElement("div");
-        divCart.setAttribute("class", "items");
-        divCart.id = "div" + i;
-        document.getElementById("cartProdukte") ?.appendChild(divCart);
+    let warenkorbsumme: number = 0;
+    let gesamtSumme: HTMLHeadingElement = document.createElement("h2");
+    gesamtSumme.innerText = "Gesamtsumme: " + warenkorbsumme.toLocaleString("de-DE", { style: "currency", currency: "EUR" });
+    document.getElementById("gesamtsumme")?.appendChild(gesamtSumme);
+    if (carticles[0] !== undefined) {
+        erstelleWarenkorb();
+    }
+    function erstelleWarenkorb(): void {
+        for (let i: number = 0; i < carticles.length; i++) {
 
-        let bild: HTMLElement = document.createElement("img");
-        bild.setAttribute("src", "" + localStorage.getItem("artikel_bild" + i));
-        bild.setAttribute("width", 200);
-        bild.setAttribute("height", 200);
-        divCart.appendChild(bild);
+            let divCart: HTMLDivElement = document.createElement("div");
+            divCart.setAttribute("class", "items");
+            divCart.id = "div" + i;
+            document.getElementById("cartProdukte")?.appendChild(divCart);
 
-        let artikelname: HTMLElement = document.createElement("p");
-        artikelname.innerHTML = localStorage.getItem("artikel_name" + i)!;
-        divCart.appendChild(artikelname);
+            let bild: HTMLElement = document.createElement("img");
+            bild.setAttribute("src", carticles[i].bild);
+            bild.classList.add("articlepictures");
+            divCart.appendChild(bild);
 
-        let preisDiv: HTMLElement = document.createElement("div");
-        preisDiv.setAttribute("preis", "" + localStorage.getItem("artikel_preis" + i));
-        divCart.appendChild(preisDiv);
+            let artikelname: HTMLElement = document.createElement("p");
+            artikelname.innerText = carticles[i].artikelname;
+            divCart.appendChild(artikelname);
 
-        let preis: HTMLElement = document.createElement("p");
-        divCart.appendChild(preis).innerHTML = "" + localStorage.getItem("artikel_preis" + i) + " €";
+            let preis: HTMLElement = document.createElement("p");
+            preis.innerText = carticles[i].preis.toLocaleString("de-DE", { style: "currency", currency: "EUR" });
+            divCart.appendChild(preis);
 
-        let button: HTMLElement = document.createElement("button");
-        button.innerHTML = "Artikel entfernen";
-        divCart.appendChild(button);
-        button.addEventListener("click", handleDeleteItem);
+            let button: HTMLElement = document.createElement("button");
+            button.innerText = "Artikel entfernen";
+            button.classList.add("button");
+            button.setAttribute("index", i.toString());
+            divCart.appendChild(button);
+            button.addEventListener("click", handleDeleteItem);
 
 
-        //Summe anzeigen
-        let gesamtsumme: HTMLElement = document.getElementById("gesamtsumme");
-        let summe: string = localStorage.getItem("summe")!;
-        gesamtsumme.innerText = summe + "€";
+            //Summe anzeigen
+            warenkorbsumme = warenkorbsumme + carticles[i].preis;
+            gesamtSumme.innerText = "Gesamtsumme: " + warenkorbsumme.toLocaleString("de-DE", { style: "currency", currency: "EUR" });
+
+        }
     }
 
 
     //funktion zum Entfernen einzelner Artikel
     function handleDeleteItem(_event: Event): void {
+        let aktuellertIndex: number = parseInt(<string>(<HTMLElement>_event.target).getAttribute("index")!);
+        warenkorbsumme = warenkorbsumme - carticles[aktuellertIndex].preis;
+        gesamtSumme.innerText = "Gesamtsumme: " + warenkorbsumme.toLocaleString("de-DE", { style: "currency", currency: "EUR" });
 
-
-        localStorage.removeItem('image');
-
-        let preisString: string = (<HTMLParagraphElement>(<HTMLElement>_event.currentTarget).parentElement).getAttribute("preis")!;
-        gesamtsumme = gesamtsumme - parseFloat(preisString);
-        gesamtsumme.innerHTML = "Gesamtsumme: " gesamtsumme.toFixed(2) + "€";
-
-
-        //Summe anzeigen
-        let gesamtsumme: HTMLElement = document.getElementById("gesamtsumme");
-        let summe: string = localStorage.getItem("summe")!;
-        gesamtsumme.innerText = summe + "€";
+        ((<HTMLDivElement>_event.target).parentElement?.remove());
 
     }
 

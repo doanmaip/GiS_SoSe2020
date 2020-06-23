@@ -224,8 +224,12 @@
         margin-left: auto;
         margin-right: auto;
     }
+    /* .flexProducts div img {
+        width: 300px;
+        height: 370px;
+    }*/
     
-    .flexProducts div img {
+    .articlepictures {
         width: 300px;
         height: 370px;
     }
@@ -453,6 +457,4 @@
             height: 24px;
             line-height: 25px;
         }
-
-    
     }

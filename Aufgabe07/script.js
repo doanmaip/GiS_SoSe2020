@@ -29,6 +29,7 @@ var Aufgabe07;
             }
             let imgElement = document.createElement("img");
             imgElement.src = Aufgabe07.produkte[i].bild;
+            imgElement.classList.add("articlepictures");
             document.getElementById("div" + i)?.appendChild(imgElement);
             let artikelname = document.createElement("p");
             artikelname.innerHTML = Aufgabe07.produkte[i].artikelname;
@@ -61,7 +62,6 @@ var Aufgabe07;
         produktCounter += 1;
         cartDiv.innerHTML = produktCounter + "";
         artikelSumme += parseInt(_event.currentTarget?.getAttribute("preis"));
-        localStorage.setItem("summe", artikelSumme.toString());
         if (_event.currentTarget?.getAttribute("preis")) {
             artikelSumme = count + parseInt(_event.currentTarget?.getAttribute("preis"));
             count = artikelSumme;
@@ -70,13 +70,14 @@ var Aufgabe07;
         let indexButton = _event.currentTarget.parentElement.getAttribute("index");
         let indexNr = parseInt(indexButton);
         cartProdukte.push(Aufgabe07.produkte[indexNr]);
-        localStorage.setItem("artikel_bild" + (cartProdukte.length - 1), Aufgabe07.produkte[indexNr].bild);
-        localStorage.setItem("artikel_name" + (cartProdukte.length - 1), Aufgabe07.produkte[indexNr].artikelname);
-        localStorage.setItem("artikel_description" + (cartProdukte.length - 1), Aufgabe07.produkte[indexNr].source);
-        localStorage.setItem("artikel_preis" + (cartProdukte.length - 1), Aufgabe07.produkte[indexNr].preis.toString());
-        localStorage.setItem("anzahlArtikel", cartProdukte.length.toString());
+        localStorage.setItem("cart", JSON.stringify(Aufgabe07.produkte));
+        /*
+        localStorage.setItem("artikel_bild" + (cartProdukte.length - 1), produkte[indexNr].bild);
+        localStorage.setItem("artikel_name" + (cartProdukte.length - 1), produkte[indexNr].artikelname);
+        localStorage.setItem("artikel_description" + (cartProdukte.length - 1), produkte[indexNr].source);
+        localStorage.setItem("artikel_preis" + (cartProdukte.length - 1), produkte[indexNr].preis.toString());
+        localStorage.setItem("anzahlArtikel", cartProdukte.length.toString());*/
     }
-    Aufgabe07.addtoCart = addtoCart;
     // Aufgabe 2
     let startseite = document.createElement("a");
     startseite.id = "home";
