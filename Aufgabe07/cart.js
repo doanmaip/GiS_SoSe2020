@@ -44,5 +44,19 @@ var Aufgabe07;
         gesamtSumme.innerText = "Gesamtsumme: " + warenkorbsumme.toLocaleString("de-DE", { style: "currency", currency: "EUR" });
         (_event.target.parentElement?.remove());
     }
+    let removeallButton = document.createElement("button");
+    document.getElementById("removeall").appendChild(removeallButton);
+    removeallButton.innerText = "Warenkorb leeren";
+    removeallButton.addEventListener("click", handleRemoveAll);
+    removeallButton.classList.add("button");
+    //funktion zum Entfernen aller Artikel
+    function handleRemoveAll(_event) {
+        for (let i = 0; i < carticles.length; i++) {
+            document.getElementById("div" + i).remove();
+        }
+        warenkorbsumme = 0;
+        gesamtSumme.innerText = "Gesamtsumme: " + warenkorbsumme.toLocaleString("de-DE", { style: "currency", currency: "EUR" });
+        localStorage.clear();
+    }
 })(Aufgabe07 || (Aufgabe07 = {}));
 //# sourceMappingURL=cart.js.map

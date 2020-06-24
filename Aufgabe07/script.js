@@ -70,7 +70,7 @@ var Aufgabe07;
         let indexButton = _event.currentTarget.parentElement.getAttribute("index");
         let indexNr = parseInt(indexButton);
         cartProdukte.push(Aufgabe07.produkte[indexNr]);
-        localStorage.setItem("cart", JSON.stringify(Aufgabe07.produkte));
+        localStorage.setItem("cart", JSON.stringify(cartProdukte));
         /*
         localStorage.setItem("artikel_bild" + (cartProdukte.length - 1), produkte[indexNr].bild);
         localStorage.setItem("artikel_name" + (cartProdukte.length - 1), produkte[indexNr].artikelname);
