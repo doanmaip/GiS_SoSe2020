@@ -38,9 +38,6 @@ export namespace Aufgabe09 {
         let jsonString: string = JSON.stringify(url.query);
         _response.write(jsonString);
       }
-      else if (path == "/A8") {
-        _response.write(_request.url);      //URL wird ausgegeben
-      }
     }
     _response.end();
   }
