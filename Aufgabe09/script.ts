@@ -10,7 +10,7 @@ namespace Aufgabe09 {
 
     async function HTMLbutts(): Promise<void> {
         formData = new FormData(document.forms[0]);
-        let serverURL: string = "https://mifungaa.herokuapp.com/";
+        let serverURL: string = "https://mifungaa.herokuapp.com";
         //let url: string = "http://localhost:8100";
         serverURL += "/html";
         // tslint:disable-next-line: no-any
@@ -25,7 +25,7 @@ namespace Aufgabe09 {
 
     async function JSONbutts(): Promise<void> {
         formData = new FormData(document.forms[0]);
-        let serverURL: string = "https://mifungaa.herokuapp.com/";
+        let serverURL: string = "https://mifungaa.herokuapp.com";
         //let url: string = "http://localhost:8100";
         serverURL += "/json";
         // tslint:disable-next-line: no-any

@@ -8,7 +8,7 @@ var Aufgabe09;
     JSONbutton.addEventListener("click", JSONbutts);
     async function HTMLbutts() {
         formData = new FormData(document.forms[0]);
-        let serverURL = "https://mifungaa.herokuapp.com/";
+        let serverURL = "https://mifungaa.herokuapp.com";
         //let url: string = "http://localhost:8100";
         serverURL += "/html";
         // tslint:disable-next-line: no-any
@@ -21,7 +21,7 @@ var Aufgabe09;
     }
     async function JSONbutts() {
         formData = new FormData(document.forms[0]);
-        let serverURL = "https://mifungaa.herokuapp.com/";
+        let serverURL = "https://mifungaa.herokuapp.com";
         //let url: string = "http://localhost:8100";
         serverURL += "/json";
         // tslint:disable-next-line: no-any
