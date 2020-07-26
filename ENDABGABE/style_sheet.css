@@ -1,0 +1,128 @@
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    .wave {
+        position: fixed;
+        height: 100%;
+        bottom: -50;
+        z-index: -5;
+    }
+    
+    body {
+        font-size: 15px;
+        font-family: "Avenir Medium", sans-serif;
+        letter-spacing: .05rem;
+        color: #5c5c5f;
+    }
+    
+    h1 {
+        font-style: bold;
+    }
+    
+    a {
+        text-decoration: none;
+        font-size: 12px;
+        color: #429c72
+    }
+    
+    a:hover {
+        color: #36CE88;
+    }
+    
+    a .container {
+        float: center;
+        /* funktioniert noch nicht */
+    }
+    
+    .top {
+        float: left;
+    }
+    
+    img[alt="hfu_chat_logo"] {
+        position: fixed;
+        float: left;
+        margin-top: 10px;
+        margin-left: 100px;
+        width: 150px;
+        height: 150px;
+        transition: 1s ease-in-out 0.1s
+    }
+    
+    img[alt="hfu_chat_logo"]:hover {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .container {
+        position: absolute;
+        border-radius: 10px;
+        right: 0;
+        margin: 50px;
+        max-width: 300px;
+        padding: 30px;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    .bg-img {
+        background-image: url("img/pic1.jpeg");
+        border-radius: 25px;
+        min-height: 500px;
+        max-width: 800px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: -1;
+        margin-top: 130px;
+        margin-left: 450px;
+    }
+    
+    input[type=text],
+    input[type=password] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        border: none;
+        background: #f1f1f1;
+    }
+    
+    input[type=text]:focus,
+    input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+    
+    .button {
+        background-color: #36CE88;
+        color: white;
+        font-weight: bolder;
+        letter-spacing: 0.1rem;
+        padding: 15px 20px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+        border-radius: 25px;
+    }
+    
+    .button:hover {
+        opacity: 0.7;
+    }
+    
+    .credits {
+        margin-top: 150px;
+        margin-bottom: 20px;
+        opacity: 0.5;
+        font-size: 9px;
+        line-height: 15px;
+        letter-spacing: 0.45px;
+        text-transform: uppercase;
+        text-align: center;
+        color: #5c5c5f;
+    }
